@@ -2,7 +2,7 @@ import "./JournalForm.css";
 import { useContext, useEffect, useReducer, useRef } from "react";
 import Button from "../Button/button";
 import cn from 'classnames';
-import { formReducer, INITIAL_STATE } from "./JournalForm.state";
+import { formReducer, INITIAL_STATE } from "./JournalForm.state.js";
 import Input from "../Input/Input.jsx"
 import { UserContext } from "../../context/user.context.jsx";
 
@@ -60,12 +60,14 @@ function JournalForm({ onSubmit }) {
   }, [isFormReadyToSubmit, onSubmit, values]);
 
   const addJournalItem = (e) => {
-    e.preventDefault();
+    e.preventDefault(); 
 
     const formData = new FormData(e.target);
     const formProps = Object.fromEntries(formData);
 
     formProps.userId = userId;
+
+    dispatchForm({ type: 'SUBMIT', payload: formProps }); 
 
 
   };
@@ -125,7 +127,7 @@ function JournalForm({ onSubmit }) {
         ref={post}
         className={cn("textrea", { "invalid": !isValid.post })}
       />
-      <Button>
+      <Button >
         Save
         </Button>
     </form>

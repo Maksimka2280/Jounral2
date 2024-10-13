@@ -1,28 +1,4 @@
-type FormValues = {
-    post: string;
-    title: string;
-    date: string;
-};
-
-type FormValidity = {
-    post: boolean;
-    title: boolean;
-    date: boolean;
-};
-
-type FormState = {
-    isValid: FormValidity;
-    values: FormValues;
-    isFormReadyToSubmit: boolean;
-};
-
-type Action =
-    | { type: 'SET_VALUES'; payload: Partial<FormValues> }
-    | { type: 'RESET_VALIDITY' }
-    | { type: 'SUBMIT'; payload: FormValues }
-    | { type: 'RESET_FORM' };
-
-export const INITIAL_STATE: FormState = {
+export const INITIAL_STATE = {
     isValid: {
         post: true,
         title: true,
@@ -36,7 +12,7 @@ export const INITIAL_STATE: FormState = {
     isFormReadyToSubmit: false,
 };
 
-export function formReducer(state: FormState, action: Action): FormState {
+export function formReducer(state, action) {
     switch (action.type) {
         case 'SET_VALUES':
             return { 
@@ -79,4 +55,3 @@ export function formReducer(state: FormState, action: Action): FormState {
             return state;
     }
 }
- 
