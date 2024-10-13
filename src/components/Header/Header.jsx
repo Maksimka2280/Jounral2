@@ -21,7 +21,7 @@ function Header() {
       <>
          <Logo image={logos[logoIndex]} />
          <SelectUSer changUser={changUser} />
-         <Button onClick={toggleLogo}>change logo</Button>
+         <Button onClick={toggleLogo}>change logO</Button>
       </>
    );
 }
