@@ -1,0 +1,24 @@
+.input {
+    border: none;
+    background: none;
+    font-size: 32px;
+    font-family: "Inter", sans-serif;
+    border-bottom: 1px solid #323232;
+    width: 100%;
+}
+
+
+.input-title {
+    border: none;
+    background: none;
+    font-size: 32px;
+
+}
+
+
+
+
+.invalid {
+    border: 1px solid rgb(116, 13, 13);
+    background: rgb(34, 8, 8);
+}
