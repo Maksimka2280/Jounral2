@@ -1,35 +1,38 @@
-.jounrnalform {
+.journalform {
     display: flex;
     flex-direction: column;
     gap: 30px;
-}
-
-
-
-
-
-
-.from-label {
+  }
+  
+  .form-header {
+    display: flex;
+    justify-content: space-between; /* Чтобы элементы выравнивались с концами */
+    align-items: center;
+  }
+  
+  .from-label {
     display: flex;
     align-items: center;
     gap: 20px;
     min-width: 130px;
-
-}
-
-.form-img {
+  }
+  
+  .form-img {
     width: 20px;
     height: 20px;
-}
-
-.from-row {
+  }
+  
+  .form-img--2 {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .from-row {
     display: flex;
     align-items: center;
-
-}
-
-
-.textrea{
+  }
+  
+  .textrea {
     border: none;
     background: none;
     font-size: 32px;
@@ -37,10 +40,17 @@
     border-bottom: 1px solid #323232;
     width: 100%;
     height: 200px;
-}
-
-
-.invalid {
+  }
+  
+  .invalid {
     border: 1px solid rgb(116, 13, 13);
     background: rgb(34, 8, 8);
-}
+  }
+  
+  button.delete {
+    cursor: pointer;
+    margin-left: auto; /* Перемещает кнопку в конец строки */
+    background: none;
+    border: none;
+  }
+  
